@@ -27,5 +27,10 @@ public class SecondPlayerTest {
 
         assertThrows(IllegalArgumentException.class, ()-> player.chooseSquare(new TwoDArrayBoard("OOXOOXXXX"), 'O'));
     }
+
+    public void checkForThreeTest(){
+        SecondPlayer player2 = new SecondPlayer();
+        
+    }
     
 }
