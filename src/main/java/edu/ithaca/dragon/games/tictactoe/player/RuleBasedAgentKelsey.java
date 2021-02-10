@@ -9,7 +9,7 @@ import org.javatuples.Pair;
 import edu.ithaca.dragon.games.tictactoe.board.TicTacToeBoard;
 
 
-public class SecondPlayer implements TicTacToePlayer {
+public class RuleBasedAgentKelsey implements TicTacToePlayer {
 
     Pair<Integer, Integer> topLeft = new Pair<>(0,0);
         Pair<Integer, Integer> topMiddle = new Pair<>(1,0);
