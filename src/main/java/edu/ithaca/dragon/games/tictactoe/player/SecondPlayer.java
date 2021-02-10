@@ -78,7 +78,7 @@ public class SecondPlayer implements TicTacToePlayer {
     @Override
     public Pair<Integer, Integer> chooseSquare(TicTacToeBoard curBoard, char yourSymbol) {
 
-        System.out.println("Your Player's Symbol : " + yourSymbol);
+        //System.out.println("Your Player's Symbol : " + yourSymbol);
 
 
         String currentBoardString = curBoard.buildSquaresString();
@@ -124,11 +124,11 @@ public class SecondPlayer implements TicTacToePlayer {
             return winningMove;
         }
         Pair <Integer, Integer> savingMove = checkForThree(ch, opponentSymbol, curBoard);
-        if(savingMove == null){
+        if(savingMove != null){
             return savingMove;
         }
         else{
-            for (int i = 0; i<=priorityMovesList.size(); i++){
+            for (int i = 0; i<priorityMovesList.size(); i++){
                 Pair<Integer, Integer> nextMove = priorityMovesList.get(i);
                 if (curBoard.isSquareOpen(nextMove)== true){
                         return nextMove;

@@ -22,7 +22,7 @@ public class SecondPlayerTest {
         //3
         assertEquals(new Pair<>(2, 2), player.chooseSquare(new TwoDArrayBoard("OXX O    "), 'X'));
         //4
-        assertEquals(new Pair<>(1, 2), player.chooseSquare(new TwoDArrayBoard(" OX OX   "), 'X'));
+        assertEquals(new Pair<>(2, 2), player.chooseSquare(new TwoDArrayBoard(" OX OX   "), 'X'));
 
 
         assertThrows(IllegalArgumentException.class, ()-> player.chooseSquare(new TwoDArrayBoard("OOXOOXXXX"), 'O'));
@@ -30,7 +30,10 @@ public class SecondPlayerTest {
 
     public void checkForThreeTest(){
         SecondPlayer player2 = new SecondPlayer();
-        
+
+        //0
+        assertEquals(new Pair<>(2,0), player2.checkForThree(ch, "X", curboard));
+
     }
     
 }
